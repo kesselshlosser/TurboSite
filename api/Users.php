@@ -52,7 +52,7 @@ class Users extends Turbo
 
 		$sql_limit = $this->db->placehold(' LIMIT ?, ? ', ($page-1)*$limit, $limit);
 		// Выбираем пользователей
-		$query = $this->db->placehold("SELECT u.id, u.email, u.password, u.name, u.phone, u.address, u.enabled, u.last_ip, u.created FROM __users u
+		$query = $this->db->placehold("SELECT u.id, u.email, u.password, u.name, u.phone, u.enabled, u.last_ip, u.created FROM __users u
 										WHERE 1 $keyword_filter ORDER BY $order $sql_limit");
 		$this->db->query($query);
 		return $this->db->results();
@@ -84,7 +84,7 @@ class Users extends Turbo
 			$where = $this->db->placehold(' WHERE u.id=? ', intval($id));
 	
 		// Выбираем пользователя
-		$query = $this->db->placehold("SELECT u.id, u.email, u.password, u.name,  u.phone, u.address, u.enabled, u.last_ip, u.created FROM __users u $where LIMIT 1", $id);
+		$query = $this->db->placehold("SELECT u.id, u.email, u.password, u.name,  u.phone, u.enabled, u.last_ip, u.created FROM __users u $where LIMIT 1", $id);
 		$this->db->query($query);
 		$user = $this->db->result();
 		if(empty($user))
