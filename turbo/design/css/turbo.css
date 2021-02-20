@@ -343,7 +343,8 @@ a.link:hover{
     font-size: 0.875rem;
     transition: all 0.2s ease-in-out;
 }
-.btn_admin{
+.btn_admin,
+.btn_admin:focus{
     display: inline-block;
     font-weight: 500;
     text-align: center;
@@ -352,17 +353,23 @@ a.link:hover{
     border-radius: 3px;
     cursor: pointer;
     user-select: none;
-    border: 1px solid #7300e5;
+    border: 1px solid #6b54bd;
     padding: 6px 16px;
     transition: all 0.2s ease-in-out;
     color: #fff;
-    background-color: #7300e5;
+    background-color: #6b54bd;
 }
-.btn_admin:focus,
+.btn_admin:active,
+.btn_admin:active:focus,
+.btn_admin:active:hover{
+  background-color: #574499;
+  border-color: #574499;
+  color: #ffffff;
+}
 .btn_admin:hover{
     color: #fff;
-    background-color: #8000ff;
-    border-color: #8000ff;
+    background-color: #8976ca;
+    border-color: #8976ca;
 }
 .btn.btn_big svg{
     width: 20px;
@@ -514,8 +521,8 @@ a.link:hover{
 /* Button comments*/
 .btn-warning{
     color: #fff;
-    background-color: #6d5cae;
-    border-color: #6d5cae;
+    background-color: #673ab7;
+    border-color: #673ab7;
 }
 .btn-warning:hover{
     color: #fff;
@@ -724,9 +731,9 @@ a.link:hover{
 }
 .btn-outline-warning:focus,
 .btn-outline-warning:hover {
-    color: #535c69;
-    background-color: #bbed21;
-    border-color: #bbed21;
+    color: #fff;
+    background-color: #6b54bd;
+    border-color: #6b54bd;
 }
 .btn-outline-warning.active,
 .btn-outline-warning:active{
@@ -801,9 +808,6 @@ a.link:hover{
 .boxed_success,
 .boxed_warning,
 .boxed_attention{
-    background-color: #39ccfc;
-    color: #fff;
-    border-color: #39ccfc;
     background-image: none;
     box-shadow: none;
     text-shadow: none;
@@ -814,6 +818,16 @@ a.link:hover{
     -webkit-transition: all 0.2s linear 0s;
     transition: all 0.2s linear 0s;
     border: 1px solid transparent;
+}
+.boxed_attention{
+    background-color: #d1ecf1;
+    color: #0c5460;
+    border-color: #d1ecf1;
+}
+.boxed_info{
+    background-color: #39ccfc;
+    color: #fff;
+    border-color: #39ccfc;
 }
 .boxed_warning{
     background-color: #f8e1e1;
@@ -831,9 +845,9 @@ a.link:hover{
     border-color: #e4f5cc;
 }
 .boxed_notify{
-    background-color: #6d5cae;
+    background-color: #6b54bd;
     color: #fff;
-    border-color: #6d5cae;
+    border-color: #6b54bd;
 }
 .boxed_yellow{
     background-color: #f7d622;
@@ -866,12 +880,12 @@ a.link:hover{
     color: #db4a29;
 }
 .boxed_attention .heading_box{
-    color: #fff;
+    color: #0c5460;
 }
 .boxed_success .text_box,
 .boxed_warning .text_box,
 .boxed_attention .text_box{
-    color: #fff;
+    color: #0c5460;
     text-shadow: none;
     font-size: 15px;
     margin-top: 15px;
@@ -1790,13 +1804,13 @@ label.switch_label {
     width: 100px;
 }
 .turbo_list .variants_item_name{
-    width: calc(100% - 859px);
+    width: calc(100% - 870px);
 }
 .turbo_list .variants_item_height{
     width: 57px;
 }
 .turbo_list .variants_item_color{
-    width: 120px;
+    width: 140px;
 }
 .turbo_list .variants_item_image{
     width: 57px;
@@ -1811,7 +1825,7 @@ label.switch_label {
     width: 90px;
 }
 .turbo_list .variants_item_amount{
-    width: 117px;
+    width: 100px;
 }
 .turbo_list .variants_item_weight{
     width: 90px;
@@ -2016,7 +2030,7 @@ label.switch_label {
     text-align: left;
 }
 .turbo_list .turbo_list_variant_name{
-    width: calc(100% - 753px);
+    width: calc(100% - 754px);
     position: relative;
     text-align: left;
 }
@@ -2521,7 +2535,7 @@ label.switch_label {
     cursor: pointer;
 }
 .list .add:hover{
-    color: #9dcf00;
+    color: #4caf50;
 }
 .list .delete:hover{
     color: #f82828;
@@ -2623,13 +2637,13 @@ label.switch_label {
     width: 16px;
 }
 .turbo_list_setting .setting_icon_open:hover{
-    background-color: #9b59b6;
-    border-color: #9b59b6;
+    background-color: #6b54bd;
+    border-color: #6b54bd;
     color: #fff;
 }
 .turbo_list_setting .setting_icon_copy:hover{
-    background: #2067b0;
-    border-color: #2067b0;
+    background: #535c69;
+    border-color: #535c69;
     color: #fff;
 }
 .turbo_list_setting .setting_icon_export:hover{
@@ -5670,4 +5684,51 @@ div.colorPicker-swatch {height: 20px; width: 20px; border: 1px solid #2a2a2a; ma
     border: none;
     margin-left: 15px;
     display: none;
+}
+/******************** Left menu counter */
+.menu_counter {
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    line-height: 15px;
+    font-size: 9px;
+    position: absolute;
+    right: 15px;
+    font-weight: 700;
+    border-radius: 50%;
+    display: inline-block;
+}
+.menu_counter.notification {
+    background: #ed21bb;
+    color: #ffffff;
+}
+.menu_counters {
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    line-height: 15px;
+    font-size: 9px;
+    float: right;
+    font-weight: 700;
+    border-radius: 50%;
+    display: block;
+	position: absolute;
+	right: -2px;
+    top: 0px;
+}
+.menu_counters.comments {
+    background: #b1e328;
+    color: #535c69;
+}
+.menu_counters.feedback {
+    background: #f7d622;
+    color: #535c69;
+}
+.menu_counters.callbacks {
+    background: #39ccfc;
+    color: #ffffff;
+}
+.menu_counters.subscribes {
+    background: #f76c22;
+    color: #ffffff;
 }
