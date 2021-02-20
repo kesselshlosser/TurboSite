@@ -70,7 +70,7 @@ class Comments extends Turbo
 				$px = ($lang_id ? 'l' : 'p');
 				
 				$lang_sql = $this->languages->get_query(array('object'=>'project', 'px'=>'p'));
-				$projects_fields = ', p.url, p.rating, p.votes, '.$px.'.name project';
+				$projects_fields = ', p.url, '.$px.'.name project';
                 $projects_join = 'INNER JOIN __projects p ON c.object_id=p.id '.$lang_sql->join.'';
             }
 		
