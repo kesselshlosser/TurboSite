@@ -61,9 +61,14 @@
                                     <div class="turbo_list_text_inline mb-q mr-1">
                                         <span class="text_dark text_bold">{$btr->general_name|escape}: </span> <a href="mailto:{$feedback->name|escape}<{$feedback->email|escape}>?subject=Вопрос от пользователя {$feedback->name|escape}">{$feedback->name|escape}</a>
                                     </div>
-                                    <div class="turbo_list_text_inline mb-q">
+                                    <div class="turbo_list_text_inline mb-q mr-1">
                                         <span class="text_dark text_bold">Email: </span> {$feedback->email|escape}
                                     </div>
+									{if $feedback->phone}
+									<div class="turbo_list_text_inline mb-q">
+                                        <span class="text_dark text_bold">{$btr->general_phone|escape}: </span> {$feedback->phone|escape}
+                                    </div>
+									{/if}
                                     <div class="mb-q">
                                         <span class="text_dark text_bold">{$btr->general_message|escape}</span>
                                         {$feedback->message|escape|nl2br}

@@ -40,6 +40,7 @@ class Comments extends Turbo
         $articles_join = '';
 		$projects_fields = '';
         $projects_join = '';
+		$ip = '';
 		
 		if(!empty($filter['type']))
            if($filter['type'] == 'blog')

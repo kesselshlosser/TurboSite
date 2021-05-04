@@ -176,7 +176,7 @@
 			<link itemprop="url" href="/article/{$post->url}" />
 			<div class="card-body">
 				<a href="{$lang_link}article/{$post->url}"><h2 data-article="{$post->id}" itemprop="name headline" class="card-title">{$post->name|escape}</h2></a>
-				<p class="card-text"><small class="text-muted">{if $post->author}<a class="mr-2" href="{$lang_link}articles/?keyword={$post->author|escape}">{$post->author|escape}</a>{/if} <span itemprop="datePublished" content="{$post->date}">{$post->date|date}</span> {if $post->category->name}<span class="ml-2">Рубрика:</span> <a href="articles/{$post->category->url}">{$post->category->name}</a>{/if}</small></p>
+				<p class="card-text"><small class="text-muted">{if $post->author}<a class="mr-2" href="{$lang_link}articles/?keyword={$post->author|escape}">{$post->author|escape}</a>{/if} <span itemprop="datePublished" content="{$post->date}">{$post->date|date}</span> {if $post->category->name}<span class="ml-2">{$lang->category}:</span> <a href="{$lang_link}articles/{$post->category->url}">{$post->category->name}</a>{/if}</small></p>
 				{if $post->image}<img itemprop="image" class="card-img-top" src="{$post->image|resize_articles:750:750}" alt="{$post->name|escape}">{/if}
 				<p itemprop="description" class="card-text">{$post->annotation}</p>
 				<div class="btn-group" role="group" aria-label="First group">

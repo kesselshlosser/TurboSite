@@ -10,7 +10,7 @@ class Translations extends Turbo
 	{
 		parent::__construct();
 
-        $lang_label = (isset($_SESSION['lang']) ? $_SESSION['lang'] : $this->settings->lang_label);
+        @$lang_label = (isset($_SESSION['lang']) ? $_SESSION['lang'] : $this->settings->lang_label);
         $language   = $this->languages->languages(array('id'=>$this->languages->lang_id));
         $translations = $this->languages->get_translations(array('lang'=>$language->label));
 		if(!empty($translations))

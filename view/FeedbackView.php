@@ -21,11 +21,13 @@ class FeedbackView extends View
 		{
 			$feedback->name         = $this->request->post('name');
 			$feedback->email        = $this->request->post('email');
+			$feedback->phone        = $this->request->post('phone');
 			$feedback->message      = $this->request->post('message');
 			$captcha_code           = $this->request->post('captcha_code');
 			
 			$this->design->assign('name',  $feedback->name);
 			$this->design->assign('email', $feedback->email);
+			$this->design->assign('phone', $feedback->phone);
 			$this->design->assign('message', $feedback->message);
 			
 			if(empty($feedback->name))

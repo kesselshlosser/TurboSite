@@ -466,7 +466,7 @@
 								{/if}
 							</span>
 							<div class="notification_toggle ui_sub_menu--right-arrow">
-								{if $new_comments_counter || $new_callbacks_counter || $new_feedbacks_counter}
+								{if $new_comments_counter || $new_callbacks_counter || $new_feedbacks_counter || $new_subscribes_counter}
 								{if in_array('comments', $manager->permissions)}
 								{if $new_comments_counter > 0}
 								<div class="notif_item">

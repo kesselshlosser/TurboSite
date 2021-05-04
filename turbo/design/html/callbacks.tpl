@@ -41,9 +41,14 @@
                                     <div class="turbo_list_text_inline mb-q mr-1">
                                         <span class="text_dark text_bold">{$btr->general_name|escape}: </span> {$callback->name|escape}
                                     </div>
-                                    <div class="turbo_list_text_inline mb-q">
+                                    <div class="turbo_list_text_inline mb-q mr-1">
                                         <span class="text_dark text_bold">{$btr->general_phone|escape}: </span>{$callback->phone|escape}
                                     </div>
+									{if $callback->email}
+									<div class="turbo_list_text_inline mb-q">
+                                        <span class="text_dark text_bold">  {$btr->general_email|escape}: </span>{$callback->email|escape}
+                                    </div>
+									{/if}
                                     {if $callback->message}
 									<div class="mb-q">
                                         <span class="text_dark text_bold">{$btr->general_message|escape} </span>

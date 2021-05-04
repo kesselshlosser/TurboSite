@@ -55,6 +55,10 @@
 		<div class="invalid-feedback">{$lang->enter_your_email}</div>
 	</div>
 	<div class="form-group">
+		<label for="feedback_phone">{$lang->phone}</label>
+		<input type="text" class="form-control" id="feedback_phone" placeholder="{$lang->enter_your_phone_number}" value="{$phone|escape}" id="feedback_phone" name="phone" maxlength="255">
+	</div>
+	<div class="form-group">
 		<label for="feedback_message">{$lang->message}</label>
 		<textarea class="form-control" rows="4" id="feedback_message" name="message" placeholder="{$lang->enter_your_message}" required="" data-format=".+" data-notice="{$lang->enter_your_message}">{$message|escape}</textarea>
 		<div class="invalid-feedback">{$lang->enter_your_message}</div>

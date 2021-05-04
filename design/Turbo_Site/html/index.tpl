@@ -598,6 +598,16 @@
 								<input data-format=".+" data-notice="{$lang->enter_your_phone_number}" required value="{if $callphone}{$callphone|escape}{else}{$user->phone|escape}{/if}" id="call_mask" name="phone" maxlength="255" type="text" class="form-control" placeholder="{$lang->phone}"/>
 							</div>
 						</div>
+						{*
+						<div class="form-group has-feedback">									
+							<div class="input-group">
+								<div class="input-group-prepend"> 
+									<div class="input-group-text text-primary"><i class="fv-icon-no-has fa fa-envelope"></i></div>
+								</div>
+								<input value="{if $callemail}{$callemail|escape}{else}{$user->email|escape}{/if}" name="email" maxlength="255" type="email" class="form-control" placeholder="E-mail"/>
+							</div>
+						</div>
+						*}
                         {if $settings->captcha_callback}
 						 <div class="form-row">
                             <div class="form-group col-sm-6">
@@ -701,6 +711,7 @@
     $(function(){
         $("#call_mask").mask("+*(999) 999-99-99");
         $("#phone").mask("+*(999) 999-99-99");
+		$("#feedback_phone").mask("+*(999) 999-99-99");
     });
     </script>
 	{if $smarty.session.admin == 'admin'}

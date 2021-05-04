@@ -52,6 +52,7 @@ class IndexView extends View
                 $callback = new stdClass();
 				$callback->name         = $this->request->post('name');
                 $callback->phone        = $this->request->post('phone');
+				//$callback->email        = $this->request->post('email');
                 $captcha_code           = $this->request->post('captcha_code', 'string');
                 //$callback->message      = $this->request->post('message');
                 //$callback->message      = "___";
@@ -59,6 +60,7 @@ class IndexView extends View
                 
                 $this->design->assign('callname',  $callback->name);
                 $this->design->assign('callphone', $callback->phone);
+				//$this->design->assign('callemail', $callback->email);
                 //$this->design->assign('callmessage', $callback->message);
                 
                 if(empty($callback->name)){

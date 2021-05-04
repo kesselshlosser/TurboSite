@@ -15,7 +15,7 @@ class Callbacks extends Turbo
 
 	public function get_callback($id)
 	{
-		$query = $this->db->placehold("SELECT c.id, c.name, c.phone, c.processed, c.message, c.date FROM __callbacks c WHERE id=? LIMIT 1", intval($id));
+		$query = $this->db->placehold("SELECT c.id, c.name, c.phone, c.email, c.processed, c.message, c.date FROM __callbacks c WHERE id=? LIMIT 1", intval($id));
 
 		if($this->db->query($query))
 			return $this->db->result();
@@ -46,7 +46,7 @@ class Callbacks extends Turbo
 		else
 			$sort='ASC';
 
-		$query = $this->db->placehold("SELECT c.id, c.name, c.phone, c.date, c.processed, c.message
+		$query = $this->db->placehold("SELECT c.id, c.name, c.phone, c.email, c.date, c.processed, c.message
 										FROM __callbacks c WHERE 1 $processed ORDER BY c.id $sort $sql_limit");
 	
 		$this->db->query($query);

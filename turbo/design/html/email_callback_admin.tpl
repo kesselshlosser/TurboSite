@@ -472,6 +472,12 @@
 																		<td class="es-p5t es-p5b" width="180"><span>{$btr->email_order_phone|escape}:</span></td>
 																		<td class="es-p5t es-p5b" width="180"><span>{$callback->phone|escape}</span></td>
 																	</tr>
+																	{if $callback->email}
+																	<tr valign="top">
+																		<td class="es-p5t es-p5b" width="180"><span>{$btr->email_order_email|escape}:</span></td>
+																		<td class="es-p5t es-p5b" width="180"><span>{$callback->email|escape}</span></td>
+																	</tr>
+																	{/if}
 																	{if $callback->message}
 																		<tr valign="top">
 																			<td class="es-p5t es-p5b" width="180"><span>{$btr->email_message|escape}:</span></td>
