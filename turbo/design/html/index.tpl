@@ -157,7 +157,7 @@
 						</li>
 						{/if}
 						{if in_array('comments', $manager->permissions) || in_array('feedbacks', $manager->permissions) || in_array('callbacks', $manager->permissions) || in_array('subscribes', $manager->permissions)}
-						<li class="{if in_array($smarty.get.module, array("CommentsAdmin","FeedbacksAdmin","SubscribesAdmin","CallbacksAdmin"))}open active{/if} fn_item_sub_switch nav-dropdown">
+						<li class="{if in_array($smarty.get.module, array("CommentsAdmin","CommentAdmin","FeedbacksAdmin","SubscribesAdmin","CallbacksAdmin"))}open active{/if} fn_item_sub_switch nav-dropdown">
 							<a class="nav-link fn_item_switch nav-dropdown-toggle" href="javascript:;">
 								<span class="left_comments title">{$btr->general_feedback|escape}</span>
 								<span class="icon-thumbnail">
@@ -168,7 +168,7 @@
 							</a>
 							<ul class="fn_submenu_toggle submenu">
 								{if in_array('comments', $manager->permissions)}
-								<li {if in_array($smarty.get.module, array("CommentsAdmin"))}class="active"{/if}>
+								<li {if in_array($smarty.get.module, array("CommentsAdmin","CommentAdmin"))}class="active"{/if}>
 									<a class="nav-link" href="index.php?module=CommentsAdmin">
 										<span class="icon-thumbnail">
 											<i class="icon-bubbles  icons font-lg d-block mt-4"></i> 

@@ -137,5 +137,6 @@ INSERT INTO `t_translations` (`id`, `template`, `in_config`, `label`, `lang_ru`,
 ('220','','0','email_order_text_status','присвоен статуc','assigned status','присвоєно статуc'),
 ('239','','0','project_annotation','Краткое описание проекта','Project annotation','Короткий опис проекту'),
 ('224','','0','password_remind_title','Восстановление пароля','Password recovery','Відновлення пароля'),
-('247','','0','no_projects_found','Проекты не найдены','No projects found','Проекти не знайдені');
+('247','','0','no_projects_found','Проекты не найдены','No projects found','Проекти не знайдені'),
+('248','','0','to_contact_us','Связаться с нами','To contact us','Зв\'язатися з нами');
 

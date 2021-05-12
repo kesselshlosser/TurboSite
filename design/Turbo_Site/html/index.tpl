@@ -714,6 +714,18 @@
 		$("#feedback_phone").mask("+*(999) 999-99-99");
     });
     </script>
+	{css id="chat" include=[
+	"design/{$settings->theme|escape}/css/online-chat.css"
+	]}{/css}
+	{stylesheet minify=true}
+	
+	{js id="chat" priority=99 include=[
+	"design/{$settings->theme}/js/online-chat.js"
+	]}{/js}
+	{javascript minify=false}
+	{if $settings->chat_viber || $settings->chat_whats_app || $settings->chat_telegram || $settings->chat_facebook}
+      {include file="online_chat.tpl"}
+    {/if}
 	{if $smarty.session.admin == 'admin'}
 		{$admintooltip}
 	{/if}

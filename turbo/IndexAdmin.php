@@ -21,6 +21,7 @@ class IndexAdmin extends Turbo
 		'ProjectsAdmin'             => 'projects',
 		'ProjectAdmin'              => 'projects',
 		'CommentsAdmin'             => 'comments',
+		'CommentAdmin'       		=> 'comments',
 		'FeedbacksAdmin'            => 'feedbacks',
 		'CallbacksAdmin'            => 'callbacks',
 		'SubscribesAdmin'           => 'subscribes',
